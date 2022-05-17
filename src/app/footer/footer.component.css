@@ -1,0 +1,38 @@
+footer {
+    background: linear-gradient(to right, rgb(33, 1, 36), rgb(34, 35, 36));
+    color: white;
+    padding: 50px 30px 40px 30px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 22px;
+    font-family: 'Poppins', 'Cairo', sans-serif;
+    padding-bottom: 10px;
+}
+
+.socials a {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.socials a:hover {
+    color: rgb(92, 92, 235);
+}
+
+p, li {
+    font-family: 'Raleway', 'Cairo', sans-serif;
+    font-weight: 200;
+}
+
+ul li a {
+    color: white;
+}

@@ -1,0 +1,43 @@
+.container-fluid {
+    font-family: 'Raleway', 'Cairo', sans-serif;
+}
+
+.form-div {
+    margin: 5% auto;
+}
+
+.headerrr {
+    font-weight: 400;
+    font-size: 45px;
+    color: blueviolet;
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: rgb(58, 1, 63);
+    color: white;
+}
+
+button:hover {
+    background-color: #530d88;
+    color: white;
+}
+
+.help-block {
+    color: red;
+    font-size: 15px;
+}
+
+.errBorder {
+    border: 1px solid red;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+@media only screen and (max-width: 500px) {
+    .headerrr {
+        font-size: 35px;
+    }
+}

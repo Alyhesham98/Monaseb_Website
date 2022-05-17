@@ -1,0 +1,16 @@
+.container-fluid {
+    padding: 0 150px;
+}
+
+.all {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+input {
+    width: 50px;
+}
+
+.table thead {
+    background: linear-gradient(to right, rgb(33, 1, 36), rgb(34, 35, 36));
+    color: white;
+}

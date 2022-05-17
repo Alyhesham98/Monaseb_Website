@@ -1,0 +1,96 @@
+.container-fluid {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 6em;
+    color: #2B485A;
+}
+
+.aboutParagraph {
+    padding: 10px 180px;
+    font-size: 22px;
+    color: rgb(168, 167, 167);
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2B485A;
+    margin-top: 50px;
+}
+
+h4 {
+    font-size: 20px;
+    color: #2B485A;
+}
+
+i {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.ourTeam h4 {
+    margin-bottom: 30px;
+}
+
+.img-fluid {
+    filter: brightness(50%);
+    /* SHADOW */
+    -webkit-box-shadow: 0px 10px 10px rgb(83, 81, 81);
+    -moz-box-shadow: 0px 10px 10px rgb(83, 81, 81);
+    box-shadow: 0px 10px 10px rgb(83, 81, 81);
+}
+
+.ourTeam img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    /* SHADOW */
+    -webkit-box-shadow: 0px 10px 10px rgba(83, 81, 81, 0.555);
+    -moz-box-shadow: 0px 10px 10px rgba(83, 81, 81, 0.555);
+    box-shadow: 0px 10px 10px rgba(83, 81, 81, 0.555);
+}
+
+button {
+    background-color: rgb(58, 1, 63);
+    color: white;
+}
+
+button:hover {
+    background-color: #530d88;
+    color: white;
+}
+
+@media only screen and (max-width: 990px) {
+    .aboutParagraph {
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .ourTeam img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .header {
+        font-size: 3.5em;
+    }
+    .ourTeam img {
+        width: 200px;
+        height: 200px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    .aboutParagraph {
+        font-size: 18px;
+    }
+}

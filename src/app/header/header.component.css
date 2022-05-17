@@ -1,0 +1,55 @@
+nav {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+    -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.555);
+    -moz-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.555);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.555);
+}
+
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.bg-dark {
+    background: linear-gradient(to right, rgb(33, 1, 36), rgb(34, 35, 36));
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 17px;
+}
+
+img:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.fa-heart {
+    color: rgb(179, 178, 178);
+    font-size: 20px;
+}
+
+.fa-heart:hover {
+    color: rgb(226, 16, 16);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+ul li div a:hover {
+    color: blue;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav-item {
+        margin-left: 0px;
+    }
+}

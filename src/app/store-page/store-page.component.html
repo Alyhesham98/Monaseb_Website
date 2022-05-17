@@ -1,0 +1,68 @@
+<app-second-header></app-second-header>
+<img src="assets/imgs/shoppingCover2.jpg" class="img-fluid" alt="Cover" style="opacity: 0.9;">
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <div class="col-12 col-lg-2">
+            <img src="assets/imgs/storeLogoProfile.png" id="shopPhoto" alt="Zara"
+                style="border-radius: 50%; border: 2px solid gray;" height="200" width="200">
+            <ul id="sideMenu" style="list-style: none;">
+                <li><a routerLink="/about-store">{{'MY-STORE' | translate}}</a></li>
+                <li><a routerLink="/orders">{{'ORDERS' | translate}}</a></li>
+                <li><a routerLink="/reviews">{{'REVIEWS' | translate}}</a></li>
+                <br>
+                <h5><a routerLink="/add-product"><i class="fa fa-plus-circle"
+                            style="font-size: 20px; color: #0056b3;"></i> {{'ADD-PRODUCT' | translate}}</a></h5>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-10">
+            <div class="row mb-3" *ngFor="let card of cards">
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card" style="width: 360px;">
+                        <div class="card-img-top" src="..." alt="Card image cap"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{'Polo-jacket' | translate}}</h5>
+                            <p class="card-text">300 {{'L-E-instead-of' | translate}} <span
+                                    class="card-text text-muted">350 L.E</span></p>
+                            <a routerLink="/edit-product" style="font-size: 20px;"><i class="fa fa-edit"
+                                    style="font-size: 20px; color:#0056b3;"></i> {{'EDIT' | translate}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 offset-xl-1 col-xl-3">
+                    <div class="card" style="width: 360px;">
+                        <div class="card-img-top" src="..." alt="Card image cap"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{'Polo-T-shirt' | translate}}</h5>
+                            <p class="card-text">500 {{'L-E-instead-of' | translate}} <span
+                                    class="card-text text-muted">650 L.E</span></p>
+                            <a routerLink="/edit-product" style="font-size: 20px;"><i class="fa fa-edit"
+                                    style="font-size: 20px; color: #0056b3;"></i> {{'EDIT' | translate}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 offset-xl-1 col-xl-3 offset-xl-1">
+                    <div class="card" style="width: 360px;">
+                        <div class="card-img-top" src="..." alt="Card image cap"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{'Polo-Short' | translate}}</h5>
+                            <p class="card-text">450 {{'L-E-instead-of' | translate}} <span
+                                    class="card-text text-muted">700 L.E</span></p>
+                            <a routerLink="/edit-product" style="font-size: 20px;"><i class="fa fa-edit"
+                                    style="font-size: 20px; color: #0056b3;"></i> {{'EDIT' | translate}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                <div style="border: 1px solid rgb(200, 200, 200); padding: 5px 15px; font-size: 15px;">1</div>
+                <div style="padding: 5px 15px;">Z3</div>
+                <div style="border: 1px solid rgb(200, 200, 200); padding: 5px 15px;"><i class="fa fa-chevron-right"
+                        style=" font-size: 15px; color: black;"></i></div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

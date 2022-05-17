@@ -1,0 +1,39 @@
+.card {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+    background-color: rgb(235, 235, 235);
+    border: 0px;
+    border-radius: 2%;
+    padding: 40px 0 10px 0;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: rgb(204, 202, 202);
+}
+
+a, h5 {
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #2B485A;
+}
+
+i {
+    font-size: 130px;
+    color: black;
+}
+
+@media only screen and (max-width: 900px) {
+    .card {
+        padding: 10px 0;
+    }
+    i {
+        font-size: 80px;
+    }
+}

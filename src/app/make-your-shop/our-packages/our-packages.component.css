@@ -1,0 +1,61 @@
+.container {
+    font-weight: 600;
+    font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+li {
+    line-height: 50px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 20px;
+    color: #707070;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+img {
+    margin-right: 20px;
+}
+
+button {
+    width: 115px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: rgb(58, 1, 63);
+    color: white;
+}
+
+button:hover {
+    background-color: #530d88;
+    color: white;
+}
+
+a {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+a:hover {
+    color: gray;
+}
+
+.card {
+    border-top: 7px solid;
+    border-top-color: rgb(58, 1, 63);
+    background-color: #FAF5FE;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: square;
+    padding: 5px 15px;
+}

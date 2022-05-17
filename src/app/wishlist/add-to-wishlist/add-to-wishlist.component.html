@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row text-center">
+        <div class="col">
+            <br>
+            <h1 style="font-weight: 600;">{{'MY-WISHLIST' | translate}}</h1>
+            <h1 style="font-weight: 600;">{{'ITEMS0' | translate}}</h1>
+            <br><br>
+            <p style="font-weight: 600; font-size: 18px; color: gray;">{{'your-currently' | translate}}</p>
+            <br>
+            <hr><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-12">
+            <h2 style="font-weight: 600;">{{'STORE-IT' | translate}}</h2>
+            <h5 style="font-weight: 600; color: gray;">{{'Store-everything' | translate}}</h5> <br>
+            <h6><i class="fa fa-heart"></i> {{'Think-about' | translate}}</h6>
+            <h6><i class="fa fa-heart"></i> {{'Get-notification' | translate}}</h6>
+            <h6><i class="fa fa-heart"></i> {{'Get-notified' | translate}}</h6>
+            <br><br>
+            <h3 style="font-weight: 600;">{{'Already-saved' | translate}}</h3>
+            <button class="btn btn-primary" routerLink="/login">{{'Sign-In' | translate}}</button>
+            <br>&nbsp;
+        </div>
+
+        <div class="col-lg-6 col-12">
+            <div class="card">
+                <div class="card-img-top" src="..." alt="Card image cap"></div>
+                <div class="card-body">
+                    <h5 class="card-title">{{'Polo-Short' | translate}}</h5>
+                    <p class="card-text" style="display: inline;">450 {{'L-E-instead-of' | translate}} <span
+                            class="card-text text-muted">700 L.E</span>
+                    </p>
+                    <i class="fa fa-heart float-right" style="font-size: 20px; color:rgb(226, 16, 16);"></i>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

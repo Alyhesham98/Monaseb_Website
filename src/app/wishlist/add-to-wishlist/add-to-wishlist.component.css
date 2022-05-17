@@ -1,0 +1,33 @@
+.container {
+    font-family: 'Poppins';
+}
+
+.card-img-top {
+    height: 280px;
+    background-color: #D8D8D8;
+}
+
+.card {
+    margin-bottom: 10px;  
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+i {
+    color: gray;
+}
+
+button {
+    background-color: rgb(58, 1, 63);
+    padding: 10px 80px;
+    margin-top: 15px;
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #530d88;
+    color: white;
+}

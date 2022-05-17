@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="container" style="padding-bottom: 40px;">
+    <br><br>
+    <div class="row">
+        <div class="col-12">
+            <h2><img src="assets/imgs/payment.png" alt="Account" height="70"
+                    width="70">{{'Payment-methods' | translate}}</h2>
+        </div>
+    </div>
+    <br><br>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <h3 style="color: #514B4B;">{{'Enter-Creditdetails' | translate}}</h3>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCardHolder">{{'Cardholder-name' | translate}}<span> *</span></label>
+                <input type="text" class="form-control" id="inputCardHolder" placeholder="Cardholder Name" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCardnumber">{{'Card-number' | translate}}<span> *</span></label>
+                <input type="text" class="form-control" id="inputCardnumber" placeholder="4421-5541-2144-8745" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAddress">{{'Address' | translate}}<span> *</span></label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="123, 11 Airport St." required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputExpiration">{{'Expiration-date' | translate}}<span> *</span></label>
+                <div class="input-group">
+                    <input type="number" class="form-control" min="1" max="12" placeholder="MM" required>
+                    <input type="number" class="form-control" min="2020" max="2030" placeholder="YYYY" required>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCVV">{{'Security-code' | translate}}<span> *</span></label>
+                <input type="number" class="form-control" id="inputCVV" placeholder="333" required>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-6">
+                <a routerLink="/choose-account/signup-form"><i class="fa fa-arrow-left"
+                        style="padding-right: 5px;"></i>{{'Back' | translate}}</a>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn float-right">{{'SUBMIT' | translate}}</button>
+            </div>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

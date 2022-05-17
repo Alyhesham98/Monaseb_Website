@@ -1,0 +1,80 @@
+<app-header></app-header>
+<div class="container-fluid">
+<br><br>
+    <div class="row p-3">
+        <div class="col-12 col-md-4 col-lg-3 col-xl-2">
+            <button class="btn btn-dark font-weight-bold mb-3" style="cursor: unset;"><i class="fa fa-align-left"></i>
+                {{'ALL-FILTERS' | translate}}</button>
+            <div class="collapse show mb-3">
+                <br>
+                <div class="card card-body">
+                    <section class="place">
+                        <label class="mb-3">{{'Sort-By' | translate}}</label>
+                        <label class="container">{{'Number' | translate}}
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">{{'Name' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">{{'Total' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </section>
+                    <section class="place">
+                        <label class="mb-3">{{'Order-Status' | translate}}</label>
+                        <label class="container">{{'Unpaid' | translate}}
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">{{'Processing' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">{{'Shipped' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">{{'Returned' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-9 col-xl-10">
+            <h1 style="font-family: 'Poppins'; margin-bottom: 6px;">{{'All-Orders' | translate}}</h1>
+            <br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">{{'Name' | translate}}</th>
+                        <th scope="col">{{'Order-Details' | translate}}</th>
+                        <th scope="col">{{'Order-Status' | translate}}</th>
+                        <th scope="col">{{'Total' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orders">
+                        <th scope="row">{{order.id}}</th>
+                        <td>{{order.client}}</td>
+                        <td>{{details}}</td>
+                        <td>{{status | translate}}</td>
+                        <td>{{order.total}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br><br>
+<app-footer></app-footer>

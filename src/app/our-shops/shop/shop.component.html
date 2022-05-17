@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row p-3">
+        <div class="col-12 col-md-4 col-lg-3 col-xl-2">
+            <button class="btn btn-outline-dark font-weight-bold mb-3" data-toggle="collapse" data-target="#filterMenu"
+                aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-align-left"></i>
+                {{'ALL-FILTERS' | translate}}</button>
+            <div class="collapse show mb-3" id="filterMenu">
+                <div class="card card-body filterMenu">
+                    <section class="Category">
+                        <label class="mb-3">{{'Category' | translate}}</label>
+                        <label class="container">{{'Men' | translate}}
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Women' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Kids' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-9 col-xl-10">
+            <br><br>
+            <div class="col-12 p-0 text-center">
+                <img src="assets/imgs/storeLogoProfile.png" alt="Adidas" class="img-fluid brands" width="250"
+                    height="250">
+            </div>
+            <br>
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6 col-xl-3" *ngFor="let product of products">
+                    <div class="card">
+                        <a routerLink="view-product/{{ product.id }}">
+                            <div class="card-img-top" alt="Card image cap">
+                                <img class="img-responsive w-100 h-100" [src]="product.image" alt="">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.title }}</h5>
+                            <p class="card-text" style="display: inline;">{{ product.price }} {{'L-E-instead-of' |
+                                translate}} <span class="card-text text-muted">{{ product.priceBeforeDiscount }}</span>
+                            </p>
+                            <i class="fa fa-heart float-right" (click)="onWishlistClicked(product)"
+                                style="font-size: 20px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<br>
+<app-footer></app-footer>

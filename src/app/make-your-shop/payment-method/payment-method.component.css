@@ -1,0 +1,51 @@
+.container {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+    font-weight: 600;
+}
+
+input, select {
+    border-radius: 50px;
+    height: 40px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+img {
+    margin-right: 20px;
+}
+
+span {
+    color: red;
+}
+
+button {
+    width: 115px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: rgb(58, 1, 63);
+    color: white;
+}
+
+button:hover {
+    background-color: #530d88;
+    color: white;
+}
+
+a {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+a:hover {
+    color: gray;
+}

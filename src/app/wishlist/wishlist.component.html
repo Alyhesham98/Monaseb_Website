@@ -1,0 +1,144 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand"
+            style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600;">{{'MY-WISHLIST' |
+            translate}}</a>
+        <a class="navbar-brand" style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600;">ITEMS ({{ wishlistedProducts.length }})</a>
+
+    </nav>
+    <div class="row p-3">
+        <div class="col-12 col-md-4 col-lg-3 col-xl-2">
+            <button class="btn btn-outline-dark font-weight-bold mb-3" data-toggle="collapse" data-target="#filterMenu"
+                aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-align-left"></i>
+                {{'ALL-FILTERS' | translate}}</button>
+            <div class="collapse show mb-3" id="filterMenu">
+                <div class="card card-body filterMenu">
+                    <section class="place">
+                        <label class="mb-3">{{'Location' | translate}}</label>
+                        <label class="container">{{'Alexandria' | translate}}
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">{{'El-Gharbeya' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">{{'Kafr-Elsheikh' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </section>
+                    <section class="Category">
+                        <label class="mb-3">{{'Category' | translate}}</label>
+                        <label class="container">{{'Men' | translate}}
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Women' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Kids' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </section>
+                    <section class="clothing">
+                        <label class="mb-3">{{'Clothing' | translate}}</label>
+                        <label class="container">{{'Sweatshirts' | translate}}
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'T-shirt' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Polo-Shirts' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Jackets-Coats' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Shoes' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'Swimwear' | translate}}
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-9 col-xl-10">
+            <div class="col-12 p-0">
+                <nav id="wishlistNav" class="navbar navbar-light">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle"
+                            style="background-color: white; padding: 0.4em 2em; font-weight: 600; font-size: 18px; font-family: 'Poppins', sans-serif;"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            {{'Status' | translate}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">{{'In-Stock' | translate}}</a>
+                            <a class="dropdown-item" href="#">{{'Out-Stock' | translate}}</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle"
+                            style="font-weight: 600; background-color: white; padding: 0.4em 2em; font-size: 18px; font-family: 'Poppins', sans-serif;"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            {{'Sort-By' | translate}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">{{'Recently-Added' | translate}}</a>
+                            <a class="dropdown-item" href="#">{{'Price-Low-to-High' | translate}}</a>
+                            <a class="dropdown-item" href="#">{{'Price-High-to-Low' | translate}}</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <br>
+            <div class="col-12 p-0">
+                <span class="badge badge-light mb-1">{{'Price-Out' | translate}}</span> &nbsp;
+                <span class="badge badge-light mb-1">{{'Low-in-Stock' | translate}}</span> &nbsp;
+                <span class="badge badge-light mb-1">{{'Back-in-Stock' | translate}}</span>
+            </div>
+            <br>
+            <div class="row mb-3" *ngIf="wishlistedProducts.length > 0">
+                <div class="col-12 col-lg-6 col-xl-3" *ngFor="let product of wishlistedProducts">
+                    <div class="card">
+                        <a routerLink="view-product/{{ product.id }}">
+                            <div class="card-img-top" alt="Card image cap">
+                                <img class="img-responsive w-100 h-100" [src]="product.image" alt="Product Image">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.title }}</h5>
+                            <p class="card-text" style="display: inline;">{{ product.price }} {{'L-E-instead-of' |
+                                translate}} <span class="card-text text-muted">{{ product.priceBeforeDiscount }}</span>
+                            </p>
+                            <i class="fa fa-heart float-right" (click)="onRemoveWishlist(product.id)" style="font-size: 20px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3" *ngIf="wishlistedProducts.length == 0">
+                <div class="col-12">
+                    <h1>There are no wishlisted products yet. Feel free to add some from the store!</h1>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<br>
+<app-footer></app-footer>

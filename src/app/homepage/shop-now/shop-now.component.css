@@ -1,0 +1,45 @@
+h1 {
+    font-weight: bold;
+    text-shadow: 3px 3px 1px rgb(33, 1, 36);
+}
+
+.carousel-inner .carousel-item {
+    color: white;
+    font-family: 'Raleway', 'Cairo', sans-serif;
+}
+
+img {
+    filter: brightness(35%);
+    max-height: 1200px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h5 {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(33, 1, 36);
+}
+  
+button {
+    background-color: rgb(33, 1, 36);
+}
+
+button:hover {
+    background-color: #301147;
+}
+
+a > button{
+      text-decoration: none;
+      color: white;
+}

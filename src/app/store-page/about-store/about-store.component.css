@@ -1,0 +1,11 @@
+h4 {
+    font-size: 22px;
+    font-family: 'Raleway';
+    color: #2B485A;
+}
+
+li {
+    text-align: center;
+    font-family: 'Poppins';
+    list-style: none;
+}

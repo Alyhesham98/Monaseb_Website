@@ -1,0 +1,184 @@
+<app-second-header></app-second-header>
+<br><br>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center font-weight-bold">{{'EDIT-PRODUCT' | translate}}</h1>
+        </div>
+    </div>
+
+    <form action="" class="myform" class="form-group">
+        <div class="row py-4">
+            <div class="col-lg-6 mx-auto">
+
+                <!-- Uploaded image area-->
+
+                <div class="image-area mt-4">
+                    <img id="imageResult" src="assets/imgs/polo.png" alt=""
+                        class="img-fluid rounded shadow-sm mx-auto d-block" width="300px" height="300px">
+                </div>
+                <!-- Upload image input-->
+                <div class="input-group mt-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+
+                    <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                    <label id="upload-label" for="upload"
+                        class="font-weight-light text-muted">{{'Choose-Image' | translate}}</label>
+
+                    <div class="input-group-append">
+                        <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i
+                                class="fa fa-cloud-upload mr-2 text-muted"></i><small
+                                class="text-uppercase font-weight-bold text-muted">{{'Choose-Image' | translate}}</small></label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Form 1st row-->
+        <div class="form-row">
+            <div class="col-6">
+                <label for="prodName">{{'Product-Name' | translate}}</label>
+                <input type="text" class="form-control" id="prodName" placeholder="Polo T-Shirt">
+            </div>
+            <div class="col-6">
+                <label for="prodType">{{'Product-Type' | translate}}</label>
+                <select class="form-control ">
+                    <option>{{'All' | translate}}</option>
+                    <option>{{'Men' | translate}}</option>
+                    <option>{{'Women' | translate}}</option>
+                    <option>{{'Kids' | translate}}</option>
+                </select>
+            </div>
+        </div>
+        <!-- End Form 1st row-->
+        <br>
+        <!-- Start Form 2nd row-->
+        <div class="form-row">
+            <div class="col-6">
+                <label for="prodQuan">{{'Stock-Quantity' | translate}}</label>
+                <input type="number" class="form-control" id="prodQuan" placeholder="5" min="0">
+
+            </div>
+            <div class="col-6">
+                <label for="prodCateg">{{'Product-Category' | translate}}</label>
+                <select class="form-control ">
+
+                    <optgroup label="Women">
+                        <option>T-shirts</option>
+                        <option>Blouses</option>
+                        <option>SweetShirts</option>
+                        <option>Sweaters</option>
+                        <option>Body Suits</option>
+                        <option>Tank Tops</option>
+                        <option>Blazers</option>
+                        <option>Jackets</option>
+                        <option>Denim Jackets</option>
+                        <option>Kimanos</option>
+                        <option>Vests</option>
+                        <option>Coats</option>
+                        <option>pants</option>
+                        <option>Jeans</option>
+                        <option>Leggings</option>
+                        <option>Skirts</option>
+                        <option>Shorts</option>
+                        <option>Swimwear</option>
+                    </optgroup>
+
+                    <optgroup label="Men">
+                        <option>Tees</option>
+                        <option>Hoodies</option>
+                        <option>Shirts</option>
+                        <option>Polo</option>
+                        <option>Coats</option>
+                    </optgroup>
+
+                    <optgroup label="Bags">
+                        <option>Crossbody</option>
+                        <option>Backpack</option>
+                        <option>Shoulder</option>
+                        <option>Purses</option>
+                        <option>Bag Accessories</option>
+                        <option>Bag Set</option>
+                    </optgroup>
+
+                    <optgroup label="Shoes">
+                        <option>Sneakers</option>
+                        <option>Boots</option>
+                        <option>Ankle Boots</option>
+                        <option>OverKnee Boots</option>
+                        <option>High Heels</option>
+                        <option>Low Heels</option>
+                        <option>Sanedals</option>
+                        <option>Flats</option>
+                        <option>Slippers</option>
+                    </optgroup>
+
+                    <optgroup label="Accessories">
+                        <option>Socks</option>
+                        <option>Sunglasses</option>
+                        <option>Belts</option>
+                        <option>hair accessories</option>
+                        <option>Hats</option>
+                        <option>Gloves</option>
+                        <option>Watches</option>
+                        <option>Scarves</option>
+                        <option>Keychain</option>
+                    </optgroup>
+
+                </select>
+            </div>
+
+        </div>
+        <!-- End Form 2nd row-->
+        <br>
+        <!-- Start Form 3rd row-->
+        <div class="form-row">
+            <div class="col-6">
+                <label for="prodPrice">{{'Product-Price' | translate}}</label>
+                <input type="number" class="form-control" id="prodPrice" placeholder="1200" min="0">
+            </div>
+            <div class="col-6">
+                <label for="prodDisc"> {{'Discount-Percentage' | translate}}</label>
+                <input type="number" class="form-control" id="prodDisc" placeholder="30%" min="0" max="100">
+            </div>
+        </div>
+        <!-- End Form 3rd row-->
+        <br>
+        <!-- Start Form 4th row-->
+        <div class="form-row">
+            <div class="col-6">
+                <label for="priceafter">{{'Price-After-Discount' | translate}}</label>
+                <input type="number" class="form-control" id="priceafter" placeholder="900" min="0">
+            </div>
+            <div class="col-6">
+                <label for="prodDisc"> {{'Color-Types' | translate}}</label>
+                <select class="form-control ">
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Yellow</option>
+                    <option>Green</option>
+                </select>
+            </div>
+        </div>
+        <!-- End Form 4th row-->
+        <br>
+        <!-- Start Form 5th row-->
+        <div class="form-row">
+            <div class="col-12">
+                <label for="exampleFormControlTextarea1">{{'Product-Description' | translate}}</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </div>
+        <!-- End Form 5th row-->
+
+        <!-- Start Form last row-->
+        <div class="form-row">
+            <div class="form-group col-md-12 text-center text-right mt-5">
+                <button type="submit" class="btn btn-block btn-lg">{{'Save' | translate}}</button>
+            </div>
+        </div>
+        <!-- End Form last row-->
+
+    </form>
+</div>

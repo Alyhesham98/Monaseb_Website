@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+    font-family: 'Raleway', 'Cairo', sans-serif;
+    font-weight: 300;
+    margin: 2em 0;
+    color: #662D91;
+}
+
+h2 {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+    font-size: 26px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+h5 {
+    padding-top: 10px;
+    font-family: 'Raleway', 'Cairo', sans-serif;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+@media only screen and (max-width: 800px) {
+    .row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,45 @@
+#sideMenu {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+ul li a {
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li a:hover {
+    color: rgb(173, 171, 171);
+}
+
+.shopCover {
+    height: 346px;
+    width: 100%;
+}
+
+.card-img-top {
+    height: 360px;
+    background-color: #D8D8D8;
+}
+
+.card {
+    margin-bottom: 10px;  
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #shopPhoto {
+        height: 150px;
+        width: 150px;
+    }
+
+    .nav-item {
+        margin-left: 0px;
+    }
+}

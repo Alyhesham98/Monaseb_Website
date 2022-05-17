@@ -1,0 +1,291 @@
+<app-header></app-header>
+<div class="container" style="padding-bottom: 40px;">
+    <br><br>
+    <div class="row">
+        <div class="col-12">
+            <h2><img src="assets/imgs/account.png" alt="Account" height="70" width="70">{{'Create-account' | translate}}
+            </h2>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- SIGN UP FORM -->
+    <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputShopName">{{'Shop-name' | translate}}<span> *</span></label>
+                <input type="text" class="form-control" id="inputShopName" name="shopName" formControlName="shopName"
+                    placeholder="{{'Shop-name' | translate}}"
+                    [class.errBorder]="signUpForm.get('shopName').invalid && signUpForm.get('shopName').touched">
+                <span *ngIf="signUpForm.get('shopName').invalid && signUpForm.get('shopName').touched">
+                    <span *ngIf="signUpForm.get('shopName').errors['required']" class="help-block">This field is
+                        required!</span>
+                </span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCity">{{'City' | translate}}<span> *</span></label>
+                <select id="inputCity" class="form-control" name="city" formControlName="city"
+                    [class.errBorder]="signUpForm.get('city').invalid && signUpForm.get('city').touched">
+                    <option selected>{{'Alexandria' | translate}}</option>
+                    <option>{{'Kafr-Elsheikh' | translate}}</option>
+                    <option>{{'El-Gharbeya' | translate}}</option>
+                </select>
+                <span *ngIf="signUpForm.get('city').invalid && signUpForm.get('city').touched">
+                    <span *ngIf="signUpForm.get('city').errors['required']" class="help-block">This field is
+                        required!</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputFirstName">{{'Full-name' | translate}}<span> *</span></label>
+                <input type="text" class="form-control" id="inputFirstName" name="fullName" formControlName="fullName"
+                    placeholder="{{'Full-name' | translate}}"
+                    [class.errBorder]="signUpForm.get('fullName').invalid && signUpForm.get('fullName').touched">
+                <span *ngIf="signUpForm.get('fullName').invalid && signUpForm.get('fullName').touched">
+                    <span *ngIf="signUpForm.get('fullName').errors['required']" class="help-block">This field is
+                        required!</span>
+                </span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPhone">{{'Phone-number' | translate}}<span> *</span></label>
+                <input type="tel" class="form-control" id="inputPhone" name="phoneNumber" formControlName="phoneNumber"
+                    placeholder="{{'Phone-number' | translate}}"
+                    [class.errBorder]="signUpForm.get('phoneNumber').invalid && signUpForm.get('phoneNumber').touched">
+                <span *ngIf="signUpForm.get('phoneNumber').invalid && signUpForm.get('phoneNumber').touched">
+                    <span *ngIf="signUpForm.get('phoneNumber').errors['required']" class="help-block">This field is
+                        required!</span>
+                    <span *ngIf="signUpForm.get('phoneNumber').errors['pattern']" class="help-block">Please enter a
+                        valid number!</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail">{{'E-mail' | translate}}<span> *</span></label>
+                <input type="email" class="form-control" id="inputEmail" name="email" formControlName="email"
+                    placeholder="monaaseb@gmail.com"
+                    [class.errBorder]="signUpForm.get('email').invalid && signUpForm.get('email').touched">
+                <span *ngIf="signUpForm.get('email').invalid && signUpForm.get('email').touched">
+                    <span *ngIf="signUpForm.get('email').errors['required']" class="help-block">This field is
+                        required!</span>
+                    <span *ngIf="signUpForm.get('email').errors['pattern']" class="help-block">Please enter a valid
+                        email!</span>
+                </span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAddress">{{'Address' | translate}}<span> *</span></label>
+                <input type="text" class="form-control" id="inputAddress" name="address" formControlName="address"
+                    placeholder="{{'Address' | translate}}"
+                    [class.errBorder]="signUpForm.get('address').invalid && signUpForm.get('address').touched">
+                <span *ngIf="signUpForm.get('address').invalid && signUpForm.get('address').touched">
+                    <span *ngIf="signUpForm.get('address').errors['required']" class="help-block">This field is
+                        required!</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputPassword">{{'Password' | translate}}<span> *</span></label>
+                <input type="password" class="form-control" id="inputPassword" name="password"
+                    formControlName="password" placeholder="{{'Password' | translate}}"
+                    [class.errBorder]="signUpForm.get('password').invalid && signUpForm.get('password').touched">
+                <span *ngIf="signUpForm.get('password').invalid && signUpForm.get('password').touched">
+                    <span *ngIf="signUpForm.get('password').errors['required']" class="help-block">This field is
+                        required!</span>
+                </span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputConfirmPassword">{{'Confirm-password' | translate}}<span> *</span></label>
+                <input type="password" class="form-control" id="inputConfirmPassword" name="confirmPassword"
+                    formControlName="confirmPassword" placeholder="{{'Confirm-password' | translate}}"
+                    [class.errBorder]="signUpForm.get('confirmPassword').invalid && signUpForm.get('confirmPassword').touched">
+                <span *ngIf="signUpForm.get('confirmPassword').invalid && signUpForm.get('confirmPassword').touched">
+                    <span *ngIf="signUpForm.get('confirmPassword').errors['required']" class="help-block">This field is
+                        required!</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>{{'Personal-ID' | translate}}<span> *</span></label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="personalID" name="personalID"
+                            formControlName="personalID" multiple>
+                        <label class="custom-file-label" for="personalID" style="font-weight: 300;"
+                            [class.errBorder]="signUpForm.get('personalID').invalid && signUpForm.get('personalID').touched">Jpeg/png/pdf</label>
+                    </div>
+                </div>
+                <div>
+                    <span *ngIf="signUpForm.get('personalID').invalid && signUpForm.get('personalID').touched">
+                        <span *ngIf="signUpForm.get('personalID').errors['required']" class="help-block">This field is
+                            required!</span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label>{{'Commercial-register' | translate}}</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputCommercialR" name="commercialRegister"
+                            formControlName="commercialRegister" multiple>
+                        <label class="custom-file-label" for="inputCommercialR"
+                            style="font-weight: 300;">Jpeg/png/pdf</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="aboutStore">{{'About-store' | translate}}<span> *</span></label>
+                <textarea class="form-control" id="aboutStore" name="aboutMyStore" formControlName="aboutMyStore"
+                    rows="2"
+                    [class.errBorder]="signUpForm.get('aboutMyStore').invalid && signUpForm.get('aboutMyStore').touched"></textarea>
+                <span *ngIf="signUpForm.get('aboutMyStore').invalid && signUpForm.get('aboutMyStore').touched">
+                    <span *ngIf="signUpForm.get('aboutMyStore').errors['required']" class="help-block">This field is
+                        required!</span>
+                </span>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- TERMS AND CONDITIONS -->
+
+        <div>
+            <div id="headingOne">
+                <h2 class="mb-0">
+                    <img src="assets/imgs/accept.png" alt="Account" height="70" width="70">{{'Terms-Conditions' |
+                    translate}}
+                </h2>
+            </div>
+            <br><br>
+            <div>
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>1- Amendments</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu nulla vitae quam
+                                mollis
+                                imperdiet sit
+                                amet quis velit. Vivamus rhoncus convallis aliquam. Pellentesque sed justo sed ante
+                                feugiat commodo.
+                                Cras molestie ullamcorper nunc in fringilla. Curabitur non erat convallis, molestie
+                                nulla</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>2- Payment terms, Orders</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu nulla vitae quam
+                                mollis
+                                imperdiet sit
+                                amet quis velit. Vivamus rhoncus convallis aliquam. Pellentesque sed justo sed ante
+                                feugiat commodo.
+                                Cras molestie ullamcorper nunc in fringilla. Curabitur non erat convallis, molestie
+                                nulla</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>3- Shipping</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu nulla vitae quam
+                                mollis
+                                imperdiet sit
+                                amet quis velit. Vivamus rhoncus convallis aliquam. Pellentesque sed justo sed ante
+                                feugiat commodo.
+                                Cras molestie ullamcorper nunc in fringilla. Curabitur non erat convallis, molestie
+                                nulla</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>4- Placing orders forgoods</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu nulla vitae quam
+                                mollis
+                                imperdiet sit
+                                amet quis velit. Vivamus rhoncus convallis aliquam. Pellentesque sed justo sed ante
+                                feugiat commodo.
+                                Cras molestie ullamcorper nunc in fringilla. Curabitur non erat convallis, molestie
+                                nulla</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>5- Ownership</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu nulla vitae quam
+                                mollis
+                                imperdiet sit
+                                amet quis velit. Vivamus rhoncus convallis aliquam. Pellentesque sed justo sed ante
+                                feugiat commodo.
+                                Cras molestie ullamcorper nunc in fringilla. Curabitur non erat convallis, molestie
+                                nulla</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>6- Ecommerce privacy</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu nulla vitae quam
+                                mollis
+                                imperdiet sit
+                                amet quis velit. Vivamus rhoncus convallis aliquam. Pellentesque sed justo sed ante
+                                feugiat commodo.
+                                Cras molestie ullamcorper nunc in fringilla. Curabitur non erat convallis, molestie
+                                nulla</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="checkbox" value="I agree" id="agree" required #agreeToTerms> &nbsp;
+                            <label for="agree">{{'Agree-to-Terms' | translate}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <a routerLink="/choose-account/services"><i class="fa fa-arrow-left"
+                        style="padding-right: 5px;"></i>{{'Back' | translate}}</a>
+            </div>
+            <div class="col-6">
+                <button type="submit" [disabled]="signUpForm.invalid" class="btn float-right">{{'Checkout' | translate}}</button>
+            </div>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

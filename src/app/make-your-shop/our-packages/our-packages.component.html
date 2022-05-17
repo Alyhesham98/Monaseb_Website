@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="container" style="padding-bottom: 40px;">
+    <br><br>
+    <div class="row">
+        <div class="col-12">
+            <h2><img src="assets/imgs/information.png" alt="Account" height="70" width="70">{{'Our-packages' | translate}}
+            </h2>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"
+                        style="text-align: center; color: #6C3D92; font-weight: 500; font-size: 23px;">
+                        {{'Package' | translate}}</h5>
+                    <ul class="list-group">
+                        <li>{{'Unlimited' | translate}}</li>
+                        <li>{{'Shipping' | translate}}</li>
+                        <li>{{'Ads' | translate}}</li>
+                        <li>{{'Customer-service' | translate}}</li>
+                        <li>{{'Detailed-reports' | translate}}</li>
+                        <li>{{'Barcode' | translate}}</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+            <img src="assets/imgs/discount.png" style="transform: rotate(10deg);" width="200" height="200"
+                alt="Congratulations">
+
+            <h3 style="color:red; font-size: 45px; font-family: 'Poppins', 'Cairo', sans-serif; ">{{'AFTER-DISCOUNT' | translate}}</h3>
+            <h4
+                style="text-decoration-line: line-through; font-size: 25px; font-family: 'Poppins', 'Cairo', sans-serif;  ">
+                {{'BEFORE-DISCOUNT' | translate}}</h4>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+        </div>
+        <div class="col-6">
+            <button type="button" routerLink="/choose-account/signup-form" class="btn float-right">{{'NEXT' | translate}}</button>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

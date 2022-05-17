@@ -1,0 +1,135 @@
+.container {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+label, h2, a {
+    font-weight: 600;
+}
+
+small {
+    font-weight: 300;
+    color: #8a8989;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+img {
+    margin-right: 20px;
+}
+
+label span {
+    color: red;
+}
+
+.help-block {
+    color: red;
+    font-size: 15px;
+}
+
+.errBorder {
+    border: 1px solid red;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+button {
+    width: 115px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: rgb(58, 1, 63);
+    color: white;
+}
+
+button:hover {
+    background-color: #530d88;
+    color: white;
+}
+
+a {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+a:hover {
+    color: gray;
+}
+
+.uploadStyle {
+    font-weight: bold;
+    color: black;
+    background-color: #FBB03B;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TERMS AND CONDITIONS */
+
+p, h2, h4, a, label {
+    font-weight: 600;
+    font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+p {
+    font-weight: 300;
+    color: #707070;
+}
+
+select, input {
+    border-radius: 50px;
+}
+
+select {
+    height: 40px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+img {
+    margin-right: 20px;
+}
+
+button {
+    width: 115px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: rgb(58, 1, 63);
+    color: white;
+}
+
+button:hover {
+    background-color: #530d88;
+    color: white;
+}
+
+.card-header:hover {
+    background-color: #e7e5e5;
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+a:hover {
+    color: gray;
+}

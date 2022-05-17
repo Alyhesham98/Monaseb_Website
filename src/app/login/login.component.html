@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div *ngIf="loggedIn == true" class="alert alert-success text-center" role="alert">
+    Logged In Successfully. <a href="/our-shops">Start Shopping Now!</a>
+</div>
+<div *ngIf="loggedIn == false" class="alert alert-danger text-center" role="alert">
+    Failed to Login, please check your email or password.
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="imgTrans col-lg-6 col-12">
+            <img src="assets/imgs/login.png" class="img-fluid" alt="Login">
+        </div>
+        <div class="col-lg-1 col-12"></div>
+        <div class="col-lg-4 col-12 loginForm">
+            <h1 style="text-align: center; padding-top: 20px;">{{'Login' | translate}}</h1>
+            <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                <div class="form-group">
+                    <label for="email">{{'Email' | translate}}</label>
+                    <input type="email" placeholder="{{'Email' | translate}}" class="form-control" id="email"
+                        aria-describedby="emailHelp" formControlName="email"
+                        [class.errBorder]="loginForm.get('email').invalid && loginForm.get('email').touched">
+                    <span *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+                        <span *ngIf="loginForm.get('email').errors['required']" class="help-block">This field
+                            is required!</span>
+                        <span *ngIf="loginForm.get('email').errors['email']" class="help-block">Please enter a valid
+                            email!</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="password">{{'Password' | translate}}</label>
+                    <input type="password" placeholder="{{'Password' | translate}}" class="form-control" id="password"
+                        aria-describedby="passwordHelp" formControlName="password"
+                        [class.errBorder]="loginForm.get('password').invalid && loginForm.get('password').touched">
+                    <span *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+                        <span *ngIf="loginForm.get('password').errors['required']" class="help-block">This field
+                            is required!</span>
+                    </span>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customer" class="custom-control-input" value="Customer"
+                        formControlName="currentUser">
+                    <label class="custom-control-label" for="customer">{{'Customer' | translate}}</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="shopOwner" class="custom-control-input" value="ShopOwner"
+                        formControlName="currentUser">
+                    <label class="custom-control-label" for="shopOwner">{{'Shop-owner' | translate}}</label>
+                </div>
+                <br><br>
+                <button type="submit" class="btn btn-block" [disabled]="loginForm.invalid">{{'Login' |
+                    translate}}</button>
+                <br>
+                <p>{{'dont-have-account' | translate}} <a routerLink="/choose-account"
+                        style="font-weight: 600; color: #6C3D92;">{{'Register' | translate}}</a></p>
+            </form>
+        </div>
+        <div class="col-lg-1 col-12"></div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,67 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Raleway', 'Cairo', sans-serif;
+}
+
+.row {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Raleway', 'Cairo', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1em;
+    color: #662D91;
+}
+
+
+
+img {
+    max-height: 900px;
+}
+
+button {
+    background-color: #662D91;
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #310752;
+    color: white;
+}
+
+p {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.help-block {
+    color: red;
+    font-size: 15px;
+}
+
+.errBorder {
+    border: 1px solid red;
+}
+
+@media only screen and (max-width: 1000px) {
+    img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .imgTrans {
+        display: flex;
+        justify-content: center;
+    }
+}

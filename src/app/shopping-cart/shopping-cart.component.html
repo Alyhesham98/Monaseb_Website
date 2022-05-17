@@ -1,0 +1,106 @@
+<app-header></app-header>
+<div class="all px-4 px-lg-0">
+    <div class="container pt-5 text-center">
+        <h1 class="display-4" style="font-weight: bold;">{{'SHOPPING-CART' | translate}}</h1>
+
+    </div>
+    <div class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 p-5 bg-white rounded shadow-sm mb-5">
+
+                    <!-- Shopping cart table -->
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col-md-3" class="border-0 ">
+                                        <div class="p-2 px-3 text-uppercase">{{'Product' | translate}}</div>
+                                    </th>
+                                    <th scope="col-md-3" class="border-0 ">
+                                        <div class="py-2 text-uppercase">{{'Price' | translate}}</div>
+                                    </th>
+                                    <th scope="col-md-3" class="border-0 ">
+                                        <div class="py-2 text-uppercase">{{'Quantity' | translate}}</div>
+                                    </th>
+                                    <th scope="col-md-3" class="border-0">
+                                        <div class="py-2 text-uppercase">{{'Remove' | translate}}</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of shoppingCart">
+                                    <th scope="row" class="border-0">
+                                        <div class="p-2">
+                                            <img src="{{ product.image }}"
+                                                alt="" width="70" class="img-fluid rounded shadow-sm">
+                                            <div class="ml-3 d-inline-block align-middle">
+                                                <h5 class="mb-0"> <a href="#"
+                                                        class="text-dark d-inline-block align-middle">{{ product.title }}</a></h5>
+                                                        <!-- <span class="text-muted font-weight-normal font-italic d-block">{{'Categor' | translate}}</span> -->
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="border-0 align-middle"><strong>{{ product.price }} L.E</strong></td>
+                                    <td class="border-0 align-middle"><input type="number" id="quantity" name="quantity"
+                                            min="1" value="1"></td>
+                                    <td class="border-0 align-middle"><a href="#" class="text-dark"><i
+                                                class="fa fa-trash"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- End -->
+                </div>
+            </div>
+
+            <div class="row py-5 p-4 bg-white rounded shadow-sm">
+                <div class="col-lg-6">
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">
+                        {{'Coupon-code' | translate}}</div>
+                    <div class="p-4">
+                        <p class="font-italic mb-4">{{'If-you' | translate}}</p>
+                        <div class="input-group mb-4 border rounded-pill p-2">
+                            <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3"
+                                class="form-control border-0">
+                            <div class="input-group-append border-0">
+                                <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i
+                                        class="fa fa-gift mr-2"></i>{{'Apply-coupon' | translate}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">
+                        {{'Instructions-for-seller' | translate}}
+                    </div>
+                    <div class="p-4">
+                        <p class="font-italic mb-4">{{'If-you2' | translate}}</p>
+                        <textarea name="" cols="30" rows="2" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">
+                        {{'Order-summary' | translate}} </div>
+                    <div class="p-4">
+                        <p class="font-italic mb-4">{{'Ship' | translate}}</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                    class="text-muted">{{'Order-Subtotal' | translate}} </strong><strong>{{ subtotal }} EGP</strong></li>
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                    class="text-muted">{{'Delivery' | translate}}</strong><strong>50.00 EGP</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                    class="text-muted">{{'Tax' | translate}}</strong><strong>0.00 EGP</strong></li>
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                    class="text-muted">{{'Total' | translate}}</strong>
+                                <h5 class="font-weight-bold">{{ totalPrice }} EGP</h5>
+                            </li>
+                        </ul><a href="#"
+                            class="btn btn-dark rounded-pill py-2 btn-block" routerLink="/checkout">{{'Procceed-to-checkout' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

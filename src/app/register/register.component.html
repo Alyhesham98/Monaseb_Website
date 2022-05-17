@@ -1,0 +1,89 @@
+<app-header></app-header>
+<div *ngIf="registered == true" class="alert alert-success text-center" role="alert">
+    Account Created Successfully. <a href="/login">Click Here to Login.</a>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-6 form-div">
+            <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+                <h1 class="text-center headerrr" style="color: #662D91;">{{'New-to-Monaseb' | translate}}</h1>
+                <div class="form-group">
+                    <label for="username">{{'Username' | translate}}</label>
+                    <input type="text" name="name" class="form-control"
+                        placeholder="{{'Username' | translate}}" formControlName="name"
+                        [class.errBorder]="registerForm.get('name').invalid && registerForm.get('name').touched">
+                    <span *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched">
+                        <span *ngIf="registerForm.get('name').errors['required']" class="help-block">This field is
+                            required!</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="email">{{'E-mail' | translate}}</label>
+                    <input type="email" name="email" class="form-control"
+                        placeholder="{{'E-mail' | translate}}" formControlName="email"
+                        [class.errBorder]="registerForm.get('email').invalid && registerForm.get('email').touched">
+                    <span *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+                        <span *ngIf="registerForm.get('email').errors['required']" class="help-block">This field is
+                            required!</span>
+                        <span *ngIf="registerForm.get('email').errors['email']" class="help-block">Please enter a valid
+                            email!</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="password">{{'Password' | translate}}</label>
+                    <input type="password" placeholder="{{'Password' | translate}}" name="password"
+                        class="form-control" formControlName="password"
+                        [class.errBorder]="registerForm.get('password').invalid && registerForm.get('password').touched">
+                    <span *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">
+                        <span *ngIf="registerForm.get('password').errors['required']" class="help-block">This field is
+                            required!</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="cofirmpassword">{{'Confirm-password' | translate}}</label>
+                    <input type="password" placeholder="{{'Confirm-password' | translate}}" name="confirmPassword"
+                        class="form-control" formControlName="confirmPassword"
+                        [class.errBorder]="registerForm.get('confirmPassword').invalid && registerForm.get('confirmPassword').touched">
+                    <span
+                        *ngIf="registerForm.get('confirmPassword').invalid && registerForm.get('confirmPassword').touched">
+                        <span *ngIf="registerForm.get('confirmPassword').errors['required']" class="help-block">This
+                            field is required!</span>
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block py-2"
+                        [disabled]="registerForm.invalid">{{'Register' | translate}}</button>
+                </div>
+
+                <!-- <div class="form-group">
+                    <br>
+                    <div style="width: 100%; height: 20px; border-bottom: 2px solid #DCD5D4; text-align: center">
+                        <span
+                            style="font-size: 20px; color: #9b9b9b; background-color: white; padding: 0 10px;">{{'OR' | translate}}</span>
+                    </div>
+                    <br> <br>
+
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" class="btn btn-outline-danger btn-lg btn-block">
+                                    <i class="fa fa-google float-left" style="font-size: 30px;"></i>
+                                    <span>{{'Sign-Up-Google' | translate}}</span>
+                                </a>
+
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-outline-primary btn-lg btn-block">
+                                    <i class="fa fa-facebook-f float-left" style="font-size: 30px;"></i>
+                                    <span>{{'Sign-Up-Facebook' | translate}}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
